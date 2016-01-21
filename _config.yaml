@@ -1,0 +1,18 @@
+# Site settings
+encoding: utf-8
+title: Fairtheoir Thuaidh
+description: >
+  A publishing maisonette looked down upon by pygmies.
+twitter_username: feargoidte
+github_username:  FearGoidte
+timezone: Europe/London
+baseurl: /FairtheoirThuaidh
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+
+# SASS settings
+sass:
+  sass_dir: _sass
+  style: compressed
