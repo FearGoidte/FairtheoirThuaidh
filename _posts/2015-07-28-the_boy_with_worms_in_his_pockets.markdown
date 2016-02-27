@@ -9,4 +9,5 @@ categories: publication poetry
 
 Subtitled *nine poems from the sullen ranks of childhood* a collection of poems from the sullen ranks of childhood. Work experience, funerals, and furtive fumblings. By J.&#160;P.&#160;Ó&#160;Nuanáin.
 
-* [Buy <cite>The boy with worms in his pockets</cite> from Apple](https://geo.itunes.apple.com/gb/book/boy-worms-in-his-pockets/id1088557134?mt=11&#38;at=1000laV8).
+* [Buy <cite>The boy with worms in his pockets</cite> from Apple](https://geo.itunes.apple.com/gb/book/boy-worms-in-his-pockets/id1088557134?mt=11&#38;at=1000laV8) or
+* [Buy <cite>The boy with worms in his pockets</cite> from Amazon](http://www.amazon.co.uk/gp/product/B01AAUG81E/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&#38;camp=1634&#38;creative=6738&#38;creativeASIN=B01AAUG81E&#38;linkCode=as2&#38;tag=no2orguk-21).
