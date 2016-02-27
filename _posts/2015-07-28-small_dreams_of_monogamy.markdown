@@ -7,4 +7,8 @@ categories: publication poetry
 ---
 <img src="{{ site.baseurl }}/assets/small-dreams-of-monogamy.jpeg">
 
-Subtitled <em>a baker’s dozen of explode and make-up poems</em>, a collection of thirteen poems about relationships; their tentative triumphs and unmitigated disasters. Contains tales of sexual ambivalence, self-indulgent sentimentality, and the harsh language we reserve for those we love. By J.&#160;P.&#160;Ó&#160;Nuanáin. Coming soon.
+Subtitled <em>a baker’s dozen of explode and make-up poems</em>, a collection of thirteen poems about relationships; their tentative triumphs and unmitigated disasters. Contains tales of sexual ambivalence, self-indulgent sentimentality, and the harsh language we reserve for those we love. By J.&#160;P.&#160;Ó&#160;Nuanáin.
+
+<ul>
+<li><a href="https://geo.itunes.apple.com/gb/book/small-dreams-of-monogamy/id1088557108?mt=11&#38;at=1000laV8">Buy <cite>Small dreams of monogamy</cite> from Apple</a></li>
+</ul>
