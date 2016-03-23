@@ -16,3 +16,5 @@ highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
+
+exclude: [google65d5e4337d3800b9.html]
