@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@import "partials/variables";
+
+@import "partials/print";
+
+[role=complimentary],
+#nav_validation,
+#nav_accesskeys {
+	display : none
+}
+
+object {
+	height : auto;
+	width : 4cm
+}

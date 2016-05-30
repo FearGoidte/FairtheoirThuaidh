@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+@import "partials/variables";
+
+@import "partials/screen";
+
+html {
+	background : #fff url(/images/background-paper-tile.jpeg);
+	color : #333;
+	font-size : 125%;
+}
+
+/* Site-wide navigation */
+[role=banner] [role=navigation] {
+	clear : both
+}
+
+[role=navigation] li {
+	display : inline-block /* “inline-block” rather than “inline” so that the navigation links don’t break over lines */
+}
+
+[role=banner] [role=navigation] li::before {
+	display : none /* Turn off custom markers */
+}
+
+[role=banner] [role=navigation] li a {
+	border-width : medium
+}
+
+[role=banner] dd {
+	margin : 0;
+	padding : 0
+}
+
+/* # =================================================================
+   # Table of accesskeys
+   # ================================================================= */
+
+#nav_accesskeys {
+	width : 100% /* Stop caption from wrapping */
+	}
+
+#nav_accesskeys kbd {
+	background-color : rgb(239, 240, 242);
+	border-top-color : rgb(245, 245, 245);
+	border-radius : .25rem;
+	border-top-style : solid;
+	border-top-width : .05rem;
+	box-shadow : rgb(232, 232, 232) 0 0 1.25rem 0 inset,
+	             rgb(195, 195, 195) 0 .05rem 0 0,
+	             rgb(201, 201, 201) 0 .1rem 0 0,
+	             rgb(51, 51, 51) 0 .1rem .15rem 0;
+	box-sizing : border-box;
+	color : rgb(130, 130, 130);
+	cursor : auto;
+	display : block;
+	font-size : .7em;
+	font-style : normal;
+	font-variant-caps : normal;
+	height : 1.4rem /* On the assumption the html element has a line-height of “1.4” */;
+	line-height : 1.4rem /* On the assumption the html element has a line-height of “1.4” */;
+	list-style-type : none;
+	text-align : center;
+	text-shadow : rgb(245, 245, 245) 0 .05rem 0;
+	width : 1.4rem
+}
+
+#nav_accesskeys thead {/* Hide heading */
+	display : none
+}
+
+#nav_accesskeys tr {/* Compact display of rows */
+	display : inline-block
+}

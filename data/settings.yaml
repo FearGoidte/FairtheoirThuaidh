@@ -1,0 +1,14 @@
+site:
+  base_url: https://isfeargoidte.me.uk/FairtheoirThuaidh/
+  encoding: utf-8
+  language: en-gb-oxendict
+  name: Fairtheoir Thuaidh
+  description: >
+      Pronounced a little like <em>far·hoar</em> <em>who·ig</em>, a publishing maisonette looked down upon by pygmies. A minuscule vanity publishing tent created to provide <abbr title="Universally unique identifier" class="initialism">U.U.I.D.</abbr>s for three e-books of poetry by J.P. Ó Nuanáin.
+author:
+  name: James Ó Nuanáin
+  twitter: feargoidte
+  github: FearGoidte
+CClicence:
+  url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence

@@ -1,0 +1,27 @@
+---
+
+---
+
+	<h1>All publications</h1>
+<main id="nav_main">
+<% page_articles.each_with_index do |article, i| %>
+	<article resource="<%= data.settings.site.base_url %><%= url_for article %>" typeof="http://purl.org/dc/dcmitype/Text schema:Book">
+			<header>
+				<h2 property="dcterms:title schema:Headline"><a href="<%= url_for article %>"><%= article.title %></a></h2>
+				<p class="subtitle"><%= article.data.subtitle %></p>
+				<p class="publication-date">Published on <time datetime="<%= article.date.strftime("%F") %>" property="dcterms:date schema:datePublished"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+			<link property="rdfa:copy" href="#ccpattern" />
+			</header>
+			<object property="schema:image" width="480" height="768" data="<%= '/images/' + article.slug + '.jpeg' %>" type="image/jpeg" typemustmatch="typemustmatch" role="img"></object>
+			<p property="dcterms:description schema:description"><%= article.data.description %></p>
+			<% if current_page.data.stores %>
+			<ul>
+				<% current_page.data.stores.each do |s| %>
+				<li><a href="<%= s[:url] %>">Buy ‘<%= article.title %>’ on <%= s[:name] %></a></li>
+				<% end %>
+			</ul>
+			<% end %>
+			<%= article.body %>
+	</article>
+<% end %>
+</main>

@@ -1,0 +1,29 @@
+<% wrap_layout :layout do %>
+		<main id="nav_main">
+			<header>
+				<h1 property="dcterms:title schema:Headline"><%= current_article.title %></h1>
+				<p class="subtitle"><%= current_article.data.subtitle %></p>
+				<p class="publication-date">Published on <time datetime="<%= current_article.date.strftime("%F") %>" property="dcterms:date schema:datePublished" ><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+			<link property="rdfa:copy" href="#ccpattern" />
+			</header>
+			<object property="schema:image" width="480" height="768" data="<%= '/images/' + current_article.slug + '.jpeg' %>" type="image/jpeg" typemustmatch="typemustmatch" role="img"></object>
+			<p id="description" property="dcterms:description schema:description"><%= current_article.data.description %></p>
+			<% if current_page.data.stores %>
+			<ul>
+				<% current_page.data.stores.each do |s| %>
+				<li><a href="<%= s[:url] %>">Buy ‘<%= current_article.title %>’ on <%= s[:name] %></a></li>
+				<% end %>
+			</ul>
+			<% end %>
+			<%= yield %>
+			<h2>All other publications</h2>
+			<ul>
+			<% blog.articles.each do |article| %>
+				<% unless current_article == article %>
+				<li><%= link_to article.title, article.url %></li>
+				<% end %>
+			<% end %>
+			</ul>
+		<%= partial 'layouts/partials/footer' %>
+		</main>
+<% end %>
