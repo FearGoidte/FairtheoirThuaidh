@@ -12,16 +12,20 @@
 				<p class="publication-date">Published on <time datetime="<%= article.date.strftime("%F") %>" property="dcterms:date schema:datePublished"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 			<link property="rdfa:copy" href="#ccpattern" />
 			</header>
-			<object property="schema:image" width="480" height="768" data="<%= '/images/' + article.slug + '.jpeg' %>" type="image/jpeg" typemustmatch="typemustmatch" role="img"></object>
-			<p property="dcterms:description schema:description"><%= article.data.description %></p>
-			<% if current_page.data.stores %>
-			<ul>
-				<% current_page.data.stores.each do |s| %>
-				<li><a href="<%= s[:url] %>">Buy ‘<%= article.title %>’ on <%= s[:name] %></a></li>
-				<% end %>
-			</ul>
-			<% end %>
-			<%= article.body %>
+			<div class="article_body">
+				<object property="schema:image" width="480" height="768" data="<%= '/images/' + article.slug + '.jpeg' %>" type="image/jpeg" typemustmatch="typemustmatch" role="img"></object>
+				<div class="article_text">
+					<p property="dcterms:description schema:description"><%= article.data.description %></p>
+					<% if current_page.data.stores %>
+					<ul>
+						<% current_page.data.stores.each do |s| %>
+						<li><a href="<%= s[:url] %>">Buy ‘<%= article.title %>’ on <%= s[:name] %></a></li>
+						<% end %>
+					</ul>
+					<% end %>
+					<%= article.body %>
+				</div><!-- end .article_text -->
+			</div><!-- end .article_body -->
 	</article>
 <% end %>
 </main>
