@@ -1,5 +1,5 @@
 <% wrap_layout :layout do %>
-		<main id="nav_main">
+		<main id="nav_main" class="publication">
 			<header>
 				<h1 property="dcterms:title schema:Headline"><%= current_article.title %></h1>
 				<p class="subtitle"><%= current_article.data.subtitle %></p>
@@ -28,6 +28,5 @@
 				<% end %>
 			<% end %>
 			</ul>
-		<%= partial 'layouts/partials/footer' %>
 		</main>
 <% end %>

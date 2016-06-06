@@ -32,7 +32,7 @@
 		<meta name="msapplication-config" content="/images/icons/favicons/browserconfig.xml"/>
 		<meta name="theme-color" content="#aa8238"/>
 		<% if current_article %>
-		<%= partial('layouts/partials/publication_meta') %>
+		<%= partial('layouts/publication_meta') %>
 		  <% else %>
 		<meta name="author" content="<%= data.settings.author.name %>" />
 		<meta name="description" content="<%= data.settings.site.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
@@ -59,9 +59,9 @@
 			<div role="navigation">
 				<ol>
 				<% if current_page.path == 'index.xhtml' %>
-					<li>All publications</li>
+					<li>Publications</li>
 				<% else %>
-					<li><a href="<%= url_for '/index.xhtml' %>" accesskey="1">All publications</a></li>
+					<li><a href="<%= url_for '/index.xhtml' %>" accesskey="1">Publications</a></li>
 				<% end %><!--End of home link-->
 					<li><a href="#nav_copyright" accesskey="6">Copyright</a></li>
 					<li><a href="#nav_accesskeys" accesskey="k">Access keys</a></li>
@@ -83,6 +83,6 @@
 				<li><a href="https://itunes.apple.com/gb/author/o-nuanain-j.-p./id1072462215?mt=11&amp;at=1000laV8">iTunes.</a></li>
 			</ul>
 	</div>
-	<%= partial 'layouts/partials/footer' %>
+	<%= partial 'layouts/footer' %>
 	</body>
 </html>
