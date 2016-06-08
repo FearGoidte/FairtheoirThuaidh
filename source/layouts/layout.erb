@@ -61,10 +61,10 @@
 				<% if current_page.path == 'index.xhtml' %>
 					<li>Publications</li>
 				<% else %>
-					<li><%= link_to 'Publications', '/index.xhtml', :accesskey => '1' %></li>
+					<li><%= link_to 'Publications', '/index.xhtml', accesskey: '1' %></li>
 				<% end %><!--End of home link-->
-					<li><%= link_to 'Copright', '#nav_copyright', :accesskey => '6' %></li>
-					<li><%= link_to 'Access keys', '#nav_accesskeys', :accesskey => 'k' %></li>
+					<li><%= link_to 'Copright', '#nav_copyright', accesskey: '6' %></li>
+					<li><%= link_to 'Access keys', '#nav_accesskeys', accesskey: 'k' %></li>
 					<% if current_page.path == "colophon.xhtml" %>
 					<li>Colophon</li>
 				<% else %>
