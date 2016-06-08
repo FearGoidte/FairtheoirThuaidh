@@ -48,7 +48,7 @@
 		<% if current_page.path == 'index.xhtml' %>
 				<dt property="dcterms:title" xml:lang="ga"><%= data.settings.site.name %></dt>
 		<% else %>
-				<dt xml:lang="ga"><a href="<%= url_for '/index.xhtml' %>"><%= data.settings.site.name %></a></dt>
+				<dt xml:lang="ga"><%= link_to data.settings.site.name, '/index.xhtml' %></dt>
 		<% end %>
 				<dd
 			<% if current_page.path == 'index.xhtml' %>
@@ -61,14 +61,14 @@
 				<% if current_page.path == 'index.xhtml' %>
 					<li>Publications</li>
 				<% else %>
-					<li><a href="<%= url_for '/index.xhtml' %>" accesskey="1">Publications</a></li>
+					<li><%= link_to 'Publications', '/index.xhtml', :accesskey => '1' %></li>
 				<% end %><!--End of home link-->
-					<li><a href="#nav_copyright" accesskey="6">Copyright</a></li>
-					<li><a href="#nav_accesskeys" accesskey="k">Access keys</a></li>
+					<li><%= link_to 'Copright', '#nav_copyright', :accesskey => '6' %></li>
+					<li><%= link_to 'Access keys', '#nav_accesskeys', :accesskey => 'k' %></li>
 					<% if current_page.path == "colophon.xhtml" %>
 					<li>Colophon</li>
 				<% else %>
-					<li><a href="<%= url_for "/colophon.xhtml" %>">Colophon</a></li>
+					<li><%= link_to 'Colophon', '/colophon.xhtml' %></li>
 				<% end %><!--End of archive link-->
 				</ol>
 			</div><!--End of ‘navigation’ role-->
