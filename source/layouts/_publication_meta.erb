@@ -6,9 +6,9 @@
 		<meta property="og:description" content="<%= current_article.data.description %>" />
 		<meta property="og:book:tag" content="<%= current_article.tags.join(', ') %>" />
 		<meta property="og:book:release_date" content="<%= current_article.date.strftime("%F") %>" />
-		<meta property="og:url" content="https://dl.dropboxusercontent.com/u/37891392/RDFA%20test%20for%20book%20website/open-graph.xhtml" />
-		<meta property="og:image" content="https://isfeargoidte.me.uk/FairtheoirThuaidh/assets/the-boy-with-worms-in-his-pockets.jpeg" />
-		<meta property="og:image:secure_url" content="https://isfeargoidte.me.uk/FairtheoirThuaidh/assets/the-boy-with-worms-in-his-pockets.jpeg" />
+		<meta property="og:url" content="<%= data.settings.site.base_url %>/<%= current_page.path %>" />
+		<meta property="og:image" content="<%= '/images/' + current_article.slug + '.jpeg' %>" />
+		<meta property="og:image:secure_url" content="<%= '/images/' + current_article.slug + '.jpeg' %>" />
 		<meta property="og:image:type" content="image/jpeg" />
 		<meta property="og:image:width" content="480" />
 		<meta property="og:image:height" content="768" />
