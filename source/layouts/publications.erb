@@ -20,13 +20,5 @@
 					<%= yield %>
 				</div><!-- end .article_text -->
 			</div><!-- end .article_body -->
-			<h2>All other publications</h2>
-			<ul>
-			<% blog.articles.each do |article| %>
-				<% unless current_article == article %>
-				<li><%= link_to article.title, article.url %></li>
-				<% end %>
-			<% end %>
-			</ul>
 		</main>
 <% end %>

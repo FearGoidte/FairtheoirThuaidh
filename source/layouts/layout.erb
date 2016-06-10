@@ -75,6 +75,17 @@
 		</div><!-- end of ‘banner’ role -->
 		<%= yield %>
 		<div role="complementary">
+		<% if current_article %>
+			<h2>All other publications</h2>
+			<ul>
+			<% blog.articles.each do |article| %>
+				<% unless current_article == article %>
+				<li><%= link_to article.title, article.url %></li>
+				<% end %>
+			<% end %>
+			</ul>
+		<% end %>
+			<h2>Publications let loose</h2>
 			<p>Find all books on:</p>
 			<ul class="all-books">
 				<li><a href="https://www.amazon.co.uk/-/e/B01ABT1SIM/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=B01CAANG2Q&amp;linkCode=as2&amp;tag=no2orguk-21">Amazon</a>,</li>
