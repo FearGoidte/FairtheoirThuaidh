@@ -1,7 +1,7 @@
 <% wrap_layout :layout do %>
 		<main id="nav_main" class="publication">
 			<header>
-				<h1 property="dcterms:title schema:Headline"><%= current_article.title %></h1>
+				<h1 property="dcterms:title schema:headline"><%= current_article.title %></h1>
 				<p class="subtitle"><%= current_article.data.subtitle %></p>
 				<p class="publication-date">Published on <time datetime="<%= current_article.date.strftime("%F") %>" property="dcterms:date schema:datePublished" ><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 			<link property="rdfa:copy" href="#ccpattern" />

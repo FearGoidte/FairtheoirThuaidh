@@ -7,7 +7,7 @@
 <% page_articles.each_with_index do |article, i| %>
 	<article resource="<%= data.settings.site.base_url %>/<%= url_for article %>" typeof="http://purl.org/dc/dcmitype/Text schema:Book">
 			<header>
-				<h2 property="dcterms:title schema:Headline"><a href="<%= url_for article %>"><%= article.title %></a></h2>
+				<h2 property="dcterms:title schema:headline"><a href="<%= url_for article %>"><%= article.title %></a></h2>
 				<p class="subtitle"><%= article.data.subtitle %></p>
 				<p class="publication-date">Published on <time datetime="<%= article.date.strftime("%F") %>" property="dcterms:date schema:datePublished"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 			<link property="rdfa:copy" href="#ccpattern" />
