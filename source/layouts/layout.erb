@@ -3,11 +3,11 @@
 <?xml-stylesheet href="<%= url_for "/stylesheets/print.css" %>" media="print"?>
 <?xml-stylesheet href="<%= url_for "/stylesheets/screen.css" %>" media="screen"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>"<% if current_article %> prefix="book: http://ogp.me/ns/book#"<% end %>>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= doc_title %></title>
-		<link rel="canonical" href="<%= absolute_url(current_page.path) %>" />
+		<link rel="canonical" href="<%= absolute_url(current_page) %>" />
 		<%= partial('layouts/open_graph', locals: { current_article: current_article } ) %>
 		<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/favicons/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" href="/images/icons/favicons/favicon-32x32.png" sizes="32x32" />
@@ -59,7 +59,7 @@
 			<ul>
 			<% blog.articles.each do |article| %>
 				<% unless current_article == article %>
-				<li><%= link_to article.title, article.url %></li>
+				<li><a href="<%= url_for article %>"><%= article.title %></a></li>
 				<% end %>
 			<% end %>
 			</ul>

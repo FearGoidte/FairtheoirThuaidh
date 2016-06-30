@@ -31,7 +31,6 @@
 		<meta property="book:tag" content="<%= strip_tags(current_article.tags.join(', ')) %>" />
 		<% end # check for tags %>
 		<meta property="book:release_date" content="<%= current_resource.date.strftime("%F") %>" />
-		<meta property="book:author" content="<%= data.settings.author.name %>" />
 	<%= partial('layouts/schema_publication', locals: { current_article: current_article } ) %>
 		<% else %>
 	<%= partial('layouts/schema_webpage', locals: { current_article: current_article } ) %>

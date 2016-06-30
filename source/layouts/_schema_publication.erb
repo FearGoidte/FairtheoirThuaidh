@@ -1,9 +1,10 @@
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
-	"@type": "Article",
+	"@type": "Book",
 	"headline": "<%= strip_tags(current_resource.data.title) %>",
 	"description": "<%= strip_tags(current_resource.data.description) %>",
+	"genre": "<%= current_resource.data.genre %>",
 	"keywords": "<%= strip_tags(current_article.tags.join(', ')) %>",
 	"datePublished": "<%= current_resource.date.strftime("%F") %>",
 	"dateCreated": "<%= current_resource.date.strftime("%F") %>",
