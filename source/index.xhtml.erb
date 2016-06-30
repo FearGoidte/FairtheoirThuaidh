@@ -5,17 +5,17 @@
 <h1>Publications</h1>
 <main id="nav_main">
 <% page_articles.each_with_index do |article, i| %>
-	<article resource="<%= data.settings.site.base_url %>/<%= url_for article %>" typeof="http://purl.org/dc/dcmitype/Text schema:Book">
+	<article resource="<%= absolute_url(article) %>" typeof="http://purl.org/dc/dcmitype/Text">
 			<header>
-				<h2 property="dcterms:title schema:headline"><a href="<%= url_for article %>"><%= article.title %></a></h2>
+				<h2 property="dcterms:title"><a href="<%= url_for article %>"><%= article.title %></a></h2>
 				<p class="subtitle"><%= article.data.subtitle %></p>
-				<p class="publication-date">Published on <time datetime="<%= article.date.strftime("%F") %>" property="dcterms:date schema:datePublished"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+				<p class="publication-date">Published on <time datetime="<%= article.date.strftime("%F") %>" property="dcterms:date"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 			<link property="rdfa:copy" href="#ccpattern" />
 			</header>
 			<div class="article_body">
-				<object property="schema:image" width="480" height="768" data="<%= '/images/' + article.slug + '.jpeg' %>" type="image/jpeg" typemustmatch="typemustmatch" role="img"></object>
+				<object width="480" height="768" data="<%= '/images/' + article.slug + '.jpeg' %>" type="image/jpeg" typemustmatch="typemustmatch" role="img"></object>
 				<div class="article_text">
-					<p property="dcterms:description schema:description"><%= article.data.description %></p>
+					<p property="dcterms:description"><%= article.data.description %></p>
 					<% if current_page.data.stores %>
 					<ul>
 						<% current_page.data.stores.each do |s| %>

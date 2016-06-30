@@ -5,10 +5,18 @@ site:
   name: Fairtheoir Thuaidh
   description: >
       Pronounced a little like <em>far·hoar</em> <em>who·ig</em>, a publishing maisonette looked down upon by pygmies. A minuscule vanity publishing tent created to provide <abbr title="Universally unique identifier" class="initialism">U.U.I.D.</abbr>s for three e-books of poetry by J.P. Ó Nuanáin.
+  logo:
+    url: /images/logo.png
+    height: 315
+    width: 600
+  licence:
+    copyright: 2016
+    name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 author:
   name: James Ó Nuanáin
   twitter: feargoidte
   github: FearGoidte
-CClicence:
-  url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-  name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence
+open_graph:
+  language_TERRITORY: en_GB # http://www.unicode.org/cldr/charts/25/supplemental/language_territory_information.html
+  app_id: '1594109774214889' # Must be quoted or any leading zeros will be stripped https://developers.facebook.com/docs/platforminsights/domains

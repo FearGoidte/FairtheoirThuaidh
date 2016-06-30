@@ -1,0 +1,56 @@
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Article",
+	"headline": "<%= strip_tags(current_resource.data.title) %>",
+	"description": "<%= strip_tags(current_resource.data.description) %>",
+	"keywords": "<%= strip_tags(current_article.tags.join(', ')) %>",
+	"datePublished": "<%= current_resource.date.strftime("%F") %>",
+	"dateCreated": "<%= current_resource.date.strftime("%F") %>",
+	"dateModified": "<%= current_resource.date.strftime("%F") %>",
+	"license": "<%= data.settings.site.licence.url %>",
+	"copyrightHolder": "<%= data.settings.author.name %>",
+	"copyrightYear": "<%= current_resource.date.strftime("%Y") %>",
+	<% if current_article && current_resource.data.thumbnail.url # image check %>
+	"image": {
+		"@context": "http://schema.org",
+		"@type": "ImageObject",
+		<% if current_resource.data.thumbnail.height && current_resource.data.thumbnail.width # has dimensions %>
+		"height": "<%= current_resource.data.thumbnail.height %>",
+		"width": "<%= current_resource.data.thumbnail.width %>",
+		<% end # has dimensions %>
+		"url": "<%= absolute_url(current_resource.data.thumbnail.url) %>"
+
+	},
+	<% elsif data.settings.site.logo.url # site logo %>
+	"ImageObject": {
+		"@context": "http://schema.org",
+		"@type": "ImageObject",
+
+		<% if data.settings.site.logo.height && data.settings.site.logo.width # has dimensions %>
+		"height": "<%= data.settings.site.logo.height %>",
+		"width": "<%= data.settings.site.logo.width %>",
+		<% end # has dimensions %>
+		"url": "<%= absolute_url(data.settings.site.logo.url) %>"
+	},
+	<% end # image %>
+	<% if current_resource.data.author # author conditionals %>
+	"author": "<%= current_resource.data.author %>",
+	<% else %>
+	"author": "<%= data.settings.author.name %>",
+	<% end # author conditionals %>
+	"publisher": {
+		"type": "Organization",
+		"name": "<%= data.settings.site.name %>",
+		"logo":  {
+			"@context": "http://schema.org",
+			"@type": "ImageObject",
+			"url": "<%= absolute_url(data.settings.site.logo) %>"
+  		}
+	},
+	"mainEntityOfPage": {
+		"type": "WebPage",
+		"id": "<%= absolute_url(current_page) %>"
+	}
+ }
+</script>

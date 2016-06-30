@@ -1,15 +1,15 @@
 <% wrap_layout :layout do %>
 		<main id="nav_main" class="publication">
 			<header>
-				<h1 property="dcterms:title schema:headline"><%= current_article.title %></h1>
+				<h1 property="dcterms:title"><%= current_article.title %></h1>
 				<p class="subtitle"><%= current_article.data.subtitle %></p>
-				<p class="publication-date">Published on <time datetime="<%= current_article.date.strftime("%F") %>" property="dcterms:date schema:datePublished" ><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+				<p class="publication-date">Published on <time datetime="<%= current_article.date.strftime("%F") %>" property="dcterms:date" ><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 			<link property="rdfa:copy" href="#ccpattern" />
 			</header>
 			<div class="article_body">
-				<object property="schema:image" width="480" height="768" data="<%= '/images/' + current_article.slug + '.jpeg' %>" type="image/jpeg" typemustmatch="typemustmatch" role="img"></object>
+				<object width="480" height="768" data="<%= '/images/' + current_article.slug + '.jpeg' %>" type="image/jpeg" typemustmatch="typemustmatch" role="img"></object>
 				<div class="article_text">
-					<p id="description" property="dcterms:description schema:description"><%= current_article.data.description %></p>
+					<p id="description" property="dcterms:description"><%= current_article.data.description %></p>
 					<% if current_page.data.stores %>
 					<ul>
 						<% current_page.data.stores.each do |s| %>
