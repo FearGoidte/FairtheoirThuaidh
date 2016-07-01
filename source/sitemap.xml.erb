@@ -1,0 +1,27 @@
+---
+directory_index: false
+---
+
+<?xml version="1.0" encoding="<%= config.encoding %>"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc><%= data.settings.site.base_url %>/</loc>
+      <lastmod><%= Time.now.strftime('%F') %></lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <% blog.articles.each do |article| %>
+   <url>
+      <loc><%= absolute_url(article) %></loc>
+      <lastmod><%= article.date.strftime('%F') %></lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+  <% end %>
+   <url>
+      <loc><%=absolute_url('/colophon/') %></loc>
+      <lastmod><%= File.mtime('source/colophon.xhtml.markdown.erb').strftime('%F') %></lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+</urlset>
