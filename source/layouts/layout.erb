@@ -5,9 +5,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>"<% if current_article %> prefix="book: http://ogp.me/ns/book#"<% end %>>
 	<head>
-		<link type="text/css" rel="stylesheet" href="<%= absolute_url('/stylesheets/visual.css') %>" media="print, screen">
-		<link type="text/css" rel="stylesheet" href="<%= absolute_url('/stylesheets/print.css') %>" media="print">
-		<link type="text/css" rel="stylesheet" href="<%= absolute_url('/stylesheets/screen.css') %>" media="screen">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= doc_title %></title>
 		<link rel="canonical" href="<%= absolute_url(current_page) %>" />

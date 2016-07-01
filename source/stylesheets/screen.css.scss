@@ -271,7 +271,7 @@ main article {
 
 @media (max-width : 21em) {
 	[role=banner] [role=navigation] ol {
-		justify-content : center
+		display : block
 	}
 
 	[role=banner] [role=navigation] ol li {
