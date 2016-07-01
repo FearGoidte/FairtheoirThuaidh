@@ -1,36 +1,29 @@
-<?xml version="1.0" encoding="<%= config.encoding %>"?>
-<?xml-stylesheet href="<%= url_for "/stylesheets/visual.css" %>" media="print,screen"?>
-<?xml-stylesheet href="<%= url_for "/stylesheets/print.css" %>" media="print"?>
-<?xml-stylesheet href="<%= url_for "/stylesheets/screen.css" %>" media="screen"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>"<% if current_article %> prefix="book: http://ogp.me/ns/book#"<% end %>>
+<html lang="<%= data.settings.site.language %>">
 	<head>
+		<meta charset="<%= config.encoding %>" />
 		<link type="text/css" rel="stylesheet" href="<%= absolute_url('/stylesheets/visual.css') %>" media="print, screen">
 		<link type="text/css" rel="stylesheet" href="<%= absolute_url('/stylesheets/print.css') %>" media="print">
 		<link type="text/css" rel="stylesheet" href="<%= absolute_url('/stylesheets/screen.css') %>" media="screen">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= doc_title %></title>
-		<link rel="canonical" href="<%= absolute_url(current_page) %>" />
-		<%= partial('layouts/open_graph', locals: { current_article: current_article } ) %>
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/favicons/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" href="/images/icons/favicons/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="/images/icons/favicons/favicon-16x16.png" sizes="16x16" />
-		<link rel="manifest" href="/images/icons/favicons/manifest.json" />
-		<link rel="mask-icon" href="/images/icons/favicons/safari-pinned-tab.svg" color="#aa8238" />
-		<link rel="shortcut icon" href="/images/icons/favicons/favicon.ico" />
-		<meta name="apple-mobile-web-app-title" content="Fairtheoir Thuaidh" />
-		<meta name="application-name" content="Fairtheoir Thuaidh" />
-		<meta name="msapplication-config" content="/images/icons/favicons/browserconfig.xml" />
-		<link property="rdfa:copy" href="#ccpattern" />
-	</head>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
+<%= partial('layouts/open_graph', locals: { current_article: current_article } ) %>
+		<link rel="apple-touch-icon" sizes="180x180" href="<%= absolute_url('/images/icons/favicons/apple-touch-icon.png') %>" />
+		<link rel="icon" type="image/png" href="<%= absolute_url('/images/icons/favicons/favicon-32x32.png') %>" sizes="32x32" />
+		<link rel="icon" type="image/png" href="<%= absolute_url('/images/icons/favicons/favicon-16x16.png') %>" sizes="16x16" />
+		<link rel="manifest" href="<%= absolute_url('/images/icons/favicons/manifest.json') %>" />
+		<link rel="mask-icon" href="<%= absolute_url('/images/icons/favicons/safari-pinned-tab.svg') %>" color="#5bbad5" />
+		<link rel="shortcut icon" href="<%= absolute_url('/images/icons/favicons/favicon.ico') %>" />
+		<meta name="msapplication-config" content="<%= absolute_url('/images/icons/favicons/browserconfig.xml') %>" />
 	<body>
   		<a href="#nav_main">Skip to main content</a>
 		<div role="banner">
 			<dl>
 		<% if current_page.path == 'index.xhtml' %>
-				<dt property="dcterms:title" xml:lang="ga"><%= data.settings.site.name %></dt>
+				<dt property="dcterms:title" lang="ga"><%= data.settings.site.name %></dt>
 		<% else %>
-				<dt xml:lang="ga"><%= link_to data.settings.site.name, '/index.xhtml' %></dt>
+				<dt lang="ga-ie"><a href="<%= data.settings.site.base_url %>"><%= data.settings.site.name %></a></dt>
 		<% end %>
 				<dd
 			<% if current_page.path == 'index.xhtml' %>
@@ -55,8 +48,10 @@
 				</ol>
 			</div><!--End of ‘navigation’ role-->
 		</div><!-- end of ‘banner’ role -->
-		<%= yield %>
-		<div role="complementary">
+		<main id="nav_main">
+			<h1 property="dcterms:title"><%= current_page.data.title %></h1>
+      <%= yield %>
+      		<div role="complementary">
 		<% if current_article %>
 			<h2>All other publications</h2>
 			<ul>
@@ -76,6 +71,7 @@
 				<li><a href="https://itunes.apple.com/gb/author/o-nuanain-j.-p./id1072462215?mt=11&amp;at=1000laV8">iTunes.</a></li>
 			</ul>
 	</div>
-	<%= partial 'layouts/footer' %>
+			<%= partial 'layouts/footer' %>
+	      </main>
 	</body>
 </html>
