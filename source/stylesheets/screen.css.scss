@@ -112,6 +112,11 @@ main,
 	margin-left : auto;
 	margin-right : auto
 }
+
+[role=banner] dl {
+	margin : 0
+}
+
 [role=complementary] {
 	padding : 0 1.4em
 }
@@ -160,7 +165,7 @@ dt::before {
 	content : "";
 	display : block;
 	height : 4em;
-	margin : 0 auto;
+	margin : 0 auto 1.4rem auto;
 	width : 4em
 }
 
