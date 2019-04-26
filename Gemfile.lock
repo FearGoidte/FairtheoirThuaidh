@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman-blog
-  revision: 7b7eaa8213c07648cc8b16ac47c89c8ee2c37052
+  revision: 98670afda463dd8fa9f84ecc5649817625128f24
   specs:
     middleman-blog (4.0.1)
       addressable (~> 2.3)
@@ -26,19 +26,19 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: a680fb30c54886a6b427ea9b11121b938281e106
+  revision: b7bd1d17d2b75461d57fdae93342ff861f1131ba
   specs:
-    middleman (4.1.11)
+    middleman (4.2.1)
       coffee-script (~> 2.2)
       compass-import-once (= 1.0.5)
       haml (>= 4.0.5)
       kramdown (~> 1.2)
-      middleman-cli (= 4.1.11)
-      middleman-core (= 4.1.11)
+      middleman-cli (= 4.2.1)
+      middleman-core (= 4.2.1)
       sass (>= 3.4.0, < 4.0)
-    middleman-cli (4.1.11)
+    middleman-cli (4.2.1)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.1.11)
+    middleman-core (4.2.1)
       activesupport (>= 4.2, < 5.1)
       addressable (~> 2.3)
       backports (~> 3.6)
@@ -65,7 +65,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.0.0.1)
+    activesupport (5.0.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
       minitest (~> 5.1)
@@ -76,56 +76,55 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.11.1)
+    coffee-script-source (1.12.2)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    concurrent-ruby (1.0.2)
+    concurrent-ruby (1.0.5)
     contracts (0.13.0)
-    dotenv (2.1.1)
+    dotenv (2.2.0)
     erubis (2.7.0)
     execjs (2.7.0)
     fast_blank (1.0.0)
-    fastimage (2.0.1)
-      addressable (~> 2)
-    ffi (1.9.14)
+    fastimage (2.1.0)
+    ffi (1.9.18)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
-    hashie (3.4.6)
+    hashie (3.5.5)
     htmlcompressor (0.2.0)
     i18n (0.7.0)
-    kramdown (1.13.0)
+    kramdown (1.13.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     memoist (0.15.0)
-    minitest (5.9.1)
+    minitest (5.10.1)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (3.2.0)
+    net-ssh (4.1.0)
     padrino-helpers (0.13.3.3)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.3)
       tilt (>= 1.4.1, < 3)
     padrino-support (0.13.3.3)
       activesupport (>= 3.1)
-    parallel (1.10.0)
+    parallel (1.11.1)
     ptools (1.3.3)
-    public_suffix (2.0.4)
+    public_suffix (2.0.5)
     rack (2.0.1)
     rb-fsevent (0.9.8)
-    rb-inotify (0.9.7)
+    rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    redcarpet (3.3.4)
-    sass (3.4.22)
-    servolux (0.12.0)
-    thor (0.19.1)
-    thread_safe (0.3.5)
-    tilt (2.0.5)
+    redcarpet (3.4.0)
+    sass (3.4.23)
+    servolux (0.13.0)
+    thor (0.19.4)
+    thread_safe (0.3.6)
+    tilt (2.0.7)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.3)
+    uglifier (3.1.9)
       execjs (>= 0.3.0, < 3)
 
 PLATFORMS
@@ -139,4 +138,4 @@ DEPENDENCIES
   redcarpet (~> 3.3, >= 3.3.3)
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
