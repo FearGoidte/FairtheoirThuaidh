@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def prettify_date(date)
   number = date.day.ordinalize
   ordinal = number.slice!(-2, 2)

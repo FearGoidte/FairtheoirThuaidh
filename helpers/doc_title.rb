@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def doc_title
   separator = '—'
   site_name = data.settings.site.name

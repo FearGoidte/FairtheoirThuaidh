@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def meta_title
   meta_title = if @title
                  @title

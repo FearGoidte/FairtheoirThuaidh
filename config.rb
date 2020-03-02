@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Time.zone = 'London'
 
 ###
@@ -29,7 +31,7 @@ activate :blog do |blog|
   blog.default_extension = '.markdown'
   # Enable pagination
   blog.paginate = false
-  blog.new_article_template = File.expand_path('../new_publication.erb', __FILE__)
+  blog.new_article_template = expand_path('/new_publication.erb', __dir__)
 end
 
 # Activate directory indices and remove file extensions from urls
@@ -98,4 +100,3 @@ activate :deploy do |deploy|
   deploy.commit_message = 'Published from build of master branch'
   deploy.deploy_method = :git
 end
-
